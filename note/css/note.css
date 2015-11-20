@@ -8,16 +8,16 @@
     margin: 20px auto;
     width: 700px;
     height: 100px;
-    background-color: aquamarine;
+    background-color: snow;
 }
 
 .preview div{
-    margin-top: 10px;
+    margin: 0px 3px;
     float: left;
     font-size: x-small;
     width: 80px;
     height: 80px;
-    background-color: aliceblue;
+    background-color: aquamarine;
 }
 
 .search{
@@ -38,6 +38,7 @@
 .center {
     margin: 100px auto ;
     width: 700px;
+    font-size: large;
 }
 .center div{
     float: left;

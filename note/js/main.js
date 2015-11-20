@@ -43,8 +43,27 @@ var goRight = function(){
 
 
 var updateSelected = function(org, current){
+    var children = document.getElementById("preview").childNodes;
+    children[org].innerHTML = document.getElementById('content').value;
+    children[org].style.height = '80px';
+    children[org].style.width = '80px';
+    if(children[current]){
+        children[current].style.height = '100px';
+        children[current].style.width = '100px';
+        document.getElementById('content').value = children[current].innerHTML;
+    }else{
+        //create
+        var div = document.createElement("div");
+        div.style.height = '100px';
+        div.style.width = '100px';
+        $(".preview").append(div);
+        document.getElementById('content').value = '';
+    }
+}
+
+var updateSelectedDiscard = function(org, current){
     $(".preview").children().css("height", "80px");
-    //$(".preview").children()[org].html($('#content').html());
+    $(".preview").children()[org].html($('#content').html());
     if($(".preview").children()[current]){
         $(".preview").children()[current].height = '100px';
     }else{
